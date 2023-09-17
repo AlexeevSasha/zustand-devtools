@@ -72,7 +72,8 @@ If you add a name to devtools options, the output will be like this
 
 But if you want to set your name in the set function, it will be prioritized
 ```tsx
-// index.tsx
+import { devtools } from "zustand-devtools";
+
 const useCountStore =  create(devtools((set, get) => ({
     increment: () => set(
             (state) => ({ count: ++state.count }),
